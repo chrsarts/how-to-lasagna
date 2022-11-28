@@ -132,7 +132,7 @@ nav h1 {
   background: #000;
 }
 
-.card {
+.to-make .card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,11 +144,11 @@ nav h1 {
   transition: all 0.3s ease;
   position: relative;
 }
-.card h4 {
+.to-make .card h4 {
   color: rgb(30, 30, 30);
 }
 
-.card:before {
+.to-make .card:before {
   content: "";
   position: absolute;
   background-color: rgb(0, 0, 0);
@@ -158,17 +158,17 @@ nav h1 {
   transition: all 0.4s ease;
   z-index: -1;
 }
-.card:hover:before {
+.to-make .card:hover:before {
   height: 100%;
   width: 100%;
 }
 
-.card:hover {
+.to-make .card:hover {
   transform: scale(1.1);
 }
 
-.card:hover > h4,
-.card:hover span {
+.to-make .card:hover > h4,
+.to-make .card:hover span {
   color: white;
 }
 
@@ -211,10 +211,46 @@ nav h1 {
   font-family: "Lora", serif;
 }
 
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .overview h1 {
   font-family: "Lora", serif;
+  text-align: center;
   font-weight: 900;
   font-size: 4em;
+}
+
+.overview p {
+  width: 50%;
+  text-align: center;
+}
+
+.overview .card {
+  margin: 1em 0;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  background-color: rgb(255, 236, 212);
+  border-radius: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.overview .card h3 {
+  font-family: "Lora", serif;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 2px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
