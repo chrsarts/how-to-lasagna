@@ -234,15 +234,20 @@ nav h1 {
   padding: 10px;
   text-align: center;
   border: none;
-  background-color: rgb(255, 236, 212);
+  background-color: rgb(255, 241, 224);
   border-radius: 0;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .overview .card h3 {
   font-family: "Lora", serif;
   text-align: center;
+}
+
+.overview .card {
+  border-radius: 10px 10px 10px 10px;
+  border: 2px dashed rgb(30, 30, 30);
+  min-height: 300px;
 }
 
 ul {
@@ -253,6 +258,146 @@ li {
   margin: 2px;
 }
 
+.ingredients {
+  font-family: "Poppins", serif;
+}
+
+.ingredients .card-title {
+  text-align: center;
+}
+
+.ingredients h3 {
+  margin: 10px 0 40px 0;
+}
+
+.ingredient {
+  margin-bottom: 10px;
+}
+
+.img-separator {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50px 10px 50px 10px;
+  filter: brightness(70%);
+}
+
+.how-to {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.ingredient-container h1 {
+  font-family: "Lora", serif;
+}
+
+.ingredient-container .card {
+  background-color: rgb(255, 241, 224);
+}
+
+.items {
+  font-family: "Poppins", serif;
+}
+
+.hide {
+  display: none;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  border: 3px dashed rgb(252, 189, 0);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  animation: spin 10s linear infinite;
+}
+.custom-list {
+  list-style-type: none;
+}
+
+.custom-list li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+  font-family: "Poppins", serif;
+}
+
+.custom-list li::before {
+  display: inline-block;
+  text-align: center;
+  content: counter(step-counter);
+  font-family: "Lora", serif;
+  margin-right: 10px;
+  font-size: 1em;
+  background-color: rgb(255, 229, 198);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+}
+
+.ingredient-container .card {
+  font-family: "Poppins", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border: 3px dashed rgb(30, 30, 30);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.ingredient-container .card:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+
+.ingredient-container .card:nth-child(3) {
+  border-bottom: none;
+}
+
+.directions {
+  font-weight: "Poppins", serif;
+  width: 100%;
+}
+
+.directions h1,
+.directions h4 {
+  font-family: "Lora", serif;
+}
+
+.directions img {
+  border-radius: 24px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+.steps {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.how-to-m {
+  display: none;
+}
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .img-container img {
     width: 100px;
@@ -291,6 +436,29 @@ li {
     -webkit-filter: brightness(100%);
     -moz-filter: brightness(100%);
   }
+
+  .directions img {
+    display: none;
+  }
+
+  .overview h1 {
+    font-size: 2.5em;
+    width: 100%;
+  }
+  .overview p {
+    width: 100%;
+  }
+  .overview img {
+    height: 150px;
+  }
+
+  .how-to {
+    display: none;
+  }
+
+  .how-to-m {
+    display: block;
+  }
 }
 
 footer {
@@ -301,3 +469,14 @@ footer {
 .footer-container {
   color: white;
 }
+
+/* REDO INGREDIENT LIST 
+
+MAKE IT INTO DIFFERENT CARDS 
+
+download images for each ingredient
+
+animate detailed ingredient with show/hide button
+
+design instructions
+*/
